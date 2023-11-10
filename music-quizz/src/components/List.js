@@ -1,13 +1,15 @@
 
 
 export default function List({questions}) {
-    console.log(questions[0].question)
+
+  const questionMapping = () => questions.map((questionInstance) => {
+    return <QuestionRow 
+    question={questionInstance.question}
+    rightanswer={questionInstance.rightanswer}
+    wrongquestion={questionInstance.wronganswer} />
+  })
+
     return (
-        <>
-        <p> {questions[0].question}</p>
-        <p> {questions[1].question}</p>
-
-
-        </>
-    )
+    
+)
 }
