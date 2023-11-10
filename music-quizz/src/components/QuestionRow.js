@@ -1,10 +1,10 @@
-export default function QuestionRow(questions) {
-    console.log(questions[0].question)
+export default function QuestionRow({question, rightanswer, wronganswer}) {
+    console.log({question})
     return (
         <>
-        <p> {questions[0].question}</p>
-        <p> {questions[1].question}</p>
-
+      <p>{question}</p>
+      <p>{rightanswer}</p>
+      <p>{wronganswer}</p>
 
         </>
     )
