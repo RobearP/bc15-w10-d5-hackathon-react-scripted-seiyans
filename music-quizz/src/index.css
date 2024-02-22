@@ -12,3 +12,30 @@ code {
     monospace;
 }
 
+.shown{
+  height: 80px;
+  width: 80px;
+}
+
+.hidden{
+  display: none;
+}
+
+.footer{
+  display: flex;
+   flex-direction: row;
+   max-height: 50px;
+   align-items: center;
+ }
+
+.footer-saiyan{
+  max-width: 50px;
+}
+ 
+.heaader{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  margin: 20px;
+  gap: 50px;
+}

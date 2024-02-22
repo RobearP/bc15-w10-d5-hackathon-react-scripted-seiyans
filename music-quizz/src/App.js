@@ -1,29 +1,27 @@
-import './App.css';
-import { questionData } from "./questiondata.js"; 
-import Header from './components/Header.js'
-import List from './components/List.js'
-import Footer from './components/Footer.js'
-import { useState } from 'react'
- 
+//import { questionData } from "./questiondata.js";
+import Header from "./components/Header.js";
+import List from "./components/List.js";
+import Footer from "./components/Footer.js";
+import { useState } from "react";
+
 function App() {
-  // const question = questionData.question
-  // // console.log(questionData)
-  // const [firstQuestion, setfirstQuestions] = useState(question)
-  // console.log(firstQuestion)
-  // const [wronganswer, setwronganswer] = useState(questionData.wronganswer)
-  // const [rightanswer, setrightanswer] = useState(questionData.rightanswer)
-  const [questions, setQuestions] = useState(questionData)
-  // console.log(questions)
-  return (
-  <>
-    <Header />
-    <List 
-    questions={questions}
-    
-    />
-    <Footer />
-  </>
-  )
+  let [correct, setCorrect] = useState(0);
+
+  function correctAnswer() {
+    setCorrect(correct + 1);
   }
+
+  return (
+    <>
+    <main className='main'>
+      <Header correct={correct} />
+      <List correctAnswer={correctAnswer} />
+      <Footer corrrect={correct} />
+      </main>
+    </>
+  );
+}
+
+//----------to run make sure u are in the music quizz folder and run npm start in the terminal------------
 
 export default App;

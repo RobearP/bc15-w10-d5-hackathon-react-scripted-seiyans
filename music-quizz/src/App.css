@@ -2,6 +2,51 @@
 
     background-color: grey;
     height: 50px;
-    width: 50px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   
+}
+
+.question {
+    display: flex-row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.red{
+    background-color: red;
+    border: solid 1px black;
+
+  }
+  
+  .green{
+    background-color: green;
+    border: solid 1px black;
+  }
+  
+  .waiting{
+    background-color: yellow;
+    border: solid 1px black;
+  }
+
+  .main{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+
+.headder{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  margin: 20px;
+  gap: 50px;
+
 }

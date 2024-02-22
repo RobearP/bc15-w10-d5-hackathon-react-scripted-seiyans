@@ -1,19 +1,18 @@
-import QuestionRow from "./QuestionRow"
+import QuestionRow from "./QuestionRow";
+import { questionData } from "../questiondata";
 
-export default function List({questions}) {
+export default function List({ correctAnswer }) {
+  const questionMapping = () =>
+    questionData.map((questionInstance) => {
+      return (
+        <QuestionRow
+          question={questionInstance.question}
+          rightanswer={questionInstance.rightanswer}
+          wronganswer={questionInstance.wronganswer}
+          correctAnswer={correctAnswer}
+        />
+      );
+    });
 
-  const questionMapping = () => questions.map((questionInstance) => {
-//  console.log(questionInstance.question)
-// let question = questioninstance.question
-    return <QuestionRow 
-    question={questionInstance.question}
-    rightanswer={questionInstance.rightanswer}
-    wronganswer={questionInstance.wronganswer} />
-  })
-
-    return (
-   <>
-   {questionMapping()}
-   </> 
-)
+  return <>{questionMapping()}</>;
 }

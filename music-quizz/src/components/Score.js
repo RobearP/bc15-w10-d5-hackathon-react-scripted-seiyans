@@ -1,3 +1,1 @@
-export default function Score() {
-    
-}
+export default function Score() {}
